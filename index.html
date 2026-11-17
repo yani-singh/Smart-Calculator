@@ -3,48 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Calculator</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main class="calculator-card">
-        <header class="calculator-header">
-            <div>
-                <h1>Calculator</h1>
-            </div>
+
+    <main class="calculator">
+        <header class="header">
+            <h1>Calculator</h1>
         </header>
 
-        <section class="screen-area" aria-label="Calculator display">
-            <p class="screen-label">YOUR RESULT</p>
-            <input type="text" id="screen" readonly placeholder="0" aria-label="Current calculation">
+        <section class="display">
+            <p class="display-text">YOUR RESULT</p>
+            <input type="text" id="screen" readonly placeholder="0">
         </section>
 
-        <section class="keypad" aria-label="Calculator buttons">
-            <button class="key key-muted" onclick="resetCalculator()">AC</button>
-            <button class="key key-muted" onclick="enterSymbol('(')">(</button>
-            <button class="key key-muted" onclick="enterSymbol(')')">)</button>
-            <button class="key key-accent" onclick="removeLast()">⌫</button>
+        <section class="buttons">
 
-            <button class="key" onclick="enterSymbol('7')">7</button>
-            <button class="key" onclick="enterSymbol('8')">8</button>
-            <button class="key" onclick="enterSymbol('9')">9</button>
-            <button class="key key-accent" onclick="enterSymbol('/')">÷</button>
+            <button class="clear-btn" onclick="resetCalculator()">AC</button>
+            <button class="special-btn" onclick="enterSymbol('(')">(</button>
+            <button class="special-btn" onclick="enterSymbol(')')">)</button>
+            <button class="special-btn" onclick="removeLast()">⌫</button>
 
-            <button class="key" onclick="enterSymbol('4')">4</button>
-            <button class="key" onclick="enterSymbol('5')">5</button>
-            <button class="key" onclick="enterSymbol('6')">6</button>
-            <button class="key key-accent" onclick="enterSymbol('*')">×</button>
+            <button onclick="enterSymbol('7')">7</button>
+            <button onclick="enterSymbol('8')">8</button>
+            <button onclick="enterSymbol('9')">9</button>
+            <button class="operator-btn" onclick="enterSymbol('/')">÷</button>
 
-            <button class="key" onclick="enterSymbol('1')">1</button>
-            <button class="key" onclick="enterSymbol('2')">2</button>
-            <button class="key" onclick="enterSymbol('3')">3</button>
-            <button class="key key-accent" onclick="enterSymbol('-')">−</button>
+            <button onclick="enterSymbol('4')">4</button>
+            <button onclick="enterSymbol('5')">5</button>
+            <button onclick="enterSymbol('6')">6</button>
+            <button class="operator-btn" onclick="enterSymbol('*')">×</button>
 
-            <button class="key key-zero" onclick="enterSymbol('0')">0</button>
-            <button class="key" onclick="enterSymbol('.')">.</button>
-            <button class="key key-accent" onclick="enterSymbol('+')">+</button>
+            <button onclick="enterSymbol('1')">1</button>
+            <button onclick="enterSymbol('2')">2</button>
+            <button onclick="enterSymbol('3')">3</button>
+            <button class="operator-btn" onclick="enterSymbol('-')">−</button>
 
-            <button class="key key-equals" onclick="showAnswer()">Calculate</button>
+            <button class="zero-btn" onclick="enterSymbol('0')">0</button>
+            <button onclick="enterSymbol('.')">.</button>
+            <button class="operator-btn" onclick="enterSymbol('+')">+</button>
+
+            <button class="calculate-btn" onclick="showAnswer()">Calculate</button>
+
         </section>
     </main>
 
