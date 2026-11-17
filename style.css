@@ -1,0 +1,126 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #f3f6e9; */
+}
+
+.calculator-card {
+    width: 100%;
+    max-width: 370px;
+    padding: 25px;
+    border-radius: 20px;
+    background-color: #dcd5d1;
+    box-shadow: 0 8px 25px rgba(28, 28, 27, 0.15);
+}
+
+.calculator-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.calculator-header h1 {
+    margin-top: 5px;
+    color: #400c39;
+    font-size: 26px;
+}
+
+.screen-area {
+    height: 120px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    background-color: #fff3fd;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#screen {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #4d393c;
+    text-align: right;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+#screen::placeholder {
+    color: #050569;
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.key {
+    height: 60px;
+    border: none;
+    border-radius: 14px;
+    background-color: #f4f3ff;
+    color: #222d21;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.key:hover {
+    background-color: #c5c5ed;
+}
+
+.key:active {
+    transform: scale(0.95);
+}
+
+.key-muted {
+    background-color: #c4c5e9;
+    color: #494978;
+}
+
+.key-accent {
+    background-color: #b8b4ed;
+    color: #a5458378;
+}
+
+.key-accent:hover {
+    background-color: #d1d0db;
+}
+
+.key-zero {
+    grid-column: span 2;
+}
+
+.key-equals {
+    grid-column: span 4;
+    height: 55px;
+    border-radius: 14px;
+    background-color: #7771cf;
+    color: white;
+    font-size: 18px;
+}
+
+.key-equals:hover {
+    background-color: #807f91;
+}
+
+@media (max-width: 400px) {
+    .calculator-card {
+        padding: 20px;
+    }
+}
